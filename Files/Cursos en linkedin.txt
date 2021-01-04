@@ -1,0 +1,7 @@
+Asp net core y angular.
+
+Entity framework
+
+Docker
+
+Azure

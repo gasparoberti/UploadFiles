@@ -1,0 +1,55 @@
+index
+
+@*@model EST_adonet.Models.ESTVehiculo*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vehículos Mensualizados</h2>
+<div>
+    <div class="row col-md-12">
+        <p id="info" class="text-info col-md-12"></p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalVehiculoMensualizado" onclick="EditarOferta(-1);" style="float:right;margin-right:5px;">Nuevo Mensualizado</button>
+
+        
+    </div>
+</div>
+
+<div id="modalVehiculoMensualizado" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modalDiv">
+
+            @Html.Partial("_Editar");
+
+        </div>
+    </div>
+</div>
+
+
+----------------------------------------------------------------------------------
+
+@using rutaDondeEstaElmodelo
+
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Vehículo mensualizado Nro:<label id="idLabelForm2"> </label></h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+
+
+    @using (Html.BeginForm("PostVehiculo", "Vehiculos", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "mensualizadoForm" }))
+    {
+
+    }
+
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+    <button type="submit" form="mensualizadoForm" class="btn btn-primary" id="botonGuardar">Guardar</button>
+</div>
+
